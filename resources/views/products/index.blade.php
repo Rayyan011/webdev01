@@ -89,11 +89,14 @@
                 </table>
             </div>
         </div>
-        
+
+       
         <!-- Footer -->
         <footer class="bg-gray-800 text-white text-center p-4 mt-4">
             © 2024 ProductManager, Inc. All rights reserved.
         </footer>
+
+       
     </div>
 </body>
 </html>
