@@ -9,6 +9,12 @@
     
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .dark-mode {
+            background: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <!-- Full-Screen Container -->
@@ -16,12 +22,13 @@
        
         
         <!-- Hero Section -->
-        <div class="bg-gradient-to-r from-blue-500 to-blue-800 text-center p-20 text-white">
+        <div id="hero" class="bg-gradient-to-r from-blue-500 to-blue-800 text-center p-20 text-white">
             <h1 class="text-6xl font-bold mb-4">Manage Your Products Efficiently</h1>
             <p class="text-lg mb-6">Streamline your workflow with our intuitive product management system.</p>
+            <button onclick="toggleDarkMode()" class="bg-gray-300 text-black font-bold py-2 px-4 rounded-lg">Toggle Dark Mode</button>
             <a href="{{ route('product.create') }}" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all">Get Started</a>
         </div>
-        
+
         <!-- Features Section -->
         <div class="container mx-auto mt-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -90,13 +97,21 @@
             </div>
         </div>
 
-       
         <!-- Footer -->
         <footer class="bg-gray-800 text-white text-center p-4 mt-4">
             © 2024 ProductManager, Inc. All rights reserved.
         </footer>
 
-       
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            var heroSection = document.getElementById('hero');
+            heroSection.classList.toggle('dark-mode');
+            heroSection.classList.toggle('bg-gradient-to-r');
+            heroSection.classList.toggle('from-blue-500');
+            heroSection.classList.toggle('to-blue-800');
+        }
+    </script>
 </body>
 </html>
